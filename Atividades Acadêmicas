@@ -1,0 +1,25 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    int matricula;
+    double salario, vendas,soma, soma2;
+
+    Console.WriteLine("Digite sua matricula (00000)");
+    matricula=int.Parse(Console.ReadLine());
+
+    Console.WriteLine("Digite seu salario ($)");
+    salario=double.Parse(Console.ReadLine());
+
+    Console.WriteLine("Digite o valor feito em vendas ($)");
+    vendas=double.Parse(Console.ReadLine());
+
+  soma= vendas<=10000? salario*0.003: vendas>10000? salario*0.005:0;
+   soma2= soma+salario;
+    Console.WriteLine($"Matricula do funcionario > {matricula}");
+    Console.WriteLine($"Seu salrio bruto:{salario}");
+    Console.WriteLine($"Seu salrio bruto mais vendas {soma2}");
+
+    }
+      }
