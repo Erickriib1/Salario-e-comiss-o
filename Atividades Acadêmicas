@@ -15,11 +15,15 @@ class Program {
     Console.WriteLine("Digite o valor feito em vendas ($)");
     vendas=double.Parse(Console.ReadLine());
 
-  soma= vendas<=10000? salario*0.003: vendas>10000? salario*0.005:0;
+  soma= vendas<=10.000? vendas*0.03: vendas>10.001? vendas*0.05:0;
    soma2= soma+salario;
     Console.WriteLine($"Matricula do funcionario > {matricula}");
-    Console.WriteLine($"Seu salrio bruto:{salario}");
-    Console.WriteLine($"Seu salrio bruto mais vendas {soma2}");
+    Console.WriteLine($"Seu salario bruto: = {salario.ToString("0.000$")}");
+    Console.WriteLine($"Total de suas vendas é  = {vendas.ToString("0.000$")}");
+    Console.WriteLine($"Seu salario bruto + vendas = {soma2.ToString("0.000$")}");
+    
+
 
     }
       }
+    
